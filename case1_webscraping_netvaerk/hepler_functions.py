@@ -62,11 +62,3 @@ def get_external_urls_from_internal_links(base_url):
 
 
 
-sik_external_urls2 = get_external_urls_from_internal_links("https://www.sik.dk")
-len(sik_external_urls2)
-
-sik_external_urls2
-
-sik_external_urls3 = get_external_urls_from_internal_links('https://boligejer.dk/ejerskifteforsikring')
-
-sik_external_urls3

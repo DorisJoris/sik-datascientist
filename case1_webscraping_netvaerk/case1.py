@@ -1,5 +1,5 @@
-from case1_webscraping_netvaerk.hepler_functions import get_soup, get_hrefs, sort_links, get_external_urls
-from case1_webscraping_netvaerk.hepler_functions import get_external_urls_from_internal_links
+
+from case1_webscraping_netvaerk.hepler_functions import get_external_urls_from_internal_links, get_base_url
 
 
 import math
@@ -11,11 +11,6 @@ sik_url = "https://www.sik.dk"
 
 sik_Graph.add_node(sik_url, orden=0)
 
-sik_soup = get_soup(sik_url)
-sik_hrefs = get_hrefs(sik_soup)
-sik_internal_links, sik_urls = sort_links(sik_hrefs)
-sik_external_urls = get_external_urls(sik_urls, sik_url)
-len(sik_external_urls)
 sik_external_urls2 = get_external_urls_from_internal_links(sik_url)
 
 
@@ -33,9 +28,5 @@ max_degree_of_separation = math.ceil(math.log(1132268801, len(sik_external_urls)
 
 
 
-
-sik_internal_links[3:12]
-sik_urls[3:12]
-len(sik_external_urls)
 
 
