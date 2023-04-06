@@ -5,7 +5,7 @@ from case1_webscraping_netvaerk.hepler_functions import get_external_urls_from_i
 import math
 import networkx as nx
 
-sik_Graph = nx.Graph()
+sik_Graph = nx.DiGraph()
 
 sik_url = "https://www.sik.dk"
 
@@ -40,4 +40,9 @@ sik_Graph = add_external_url_to_graph(sik_Graph, sik_url, get_base_url(sik_exter
 sik_Graph.nodes(data=True)
 sik_Graph.edges()
 
+sik_Graph.nodes(data=False)
+
+
+url_dict = {}
+url_dict[sik_url] = get_external_urls_from_internal_links(sik_url)
 
